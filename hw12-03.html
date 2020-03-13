@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>highest of the 3</title>
+</head>
+<body>
+<form>
+    
+    <div class="container">
+        <table class="table">
+        <div class="row">
+            <div class="col col-10 col-sm-6">
+               <!-- <h2 aline="center">
+                    Biggest among three numbers
+                </h2>-->
+                <tr>
+                    <td>
+                        First number
+                    </td>
+                    <td>
+                        <input type="text" id="num1" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Second Number
+                    </td>
+                    <td><input type="text" id="num2"class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Third number
+                    </td>
+                    <td>
+                        <input type="text" id="num3"class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-primary" onclick="biggest()" >
+                            Bigger
+                        </button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <p id = "result"></p>
+                    </td>
+                </tr>
+                
+            </div>
+        </div>
+    </div>
+</table>
+</form>
+<script>
+function biggest()
+
+{
+    var a= parseInt (document.getElementById ("num1").value);
+    var b= parseInt (document.getElementById ("num2").value);
+    var c= parseInt (document.getElementById ("num3").value);
+    if (a>b)
+    {
+        if (a>c)
+    {
+        document.getElementById("result").innerHTML="Biggest Number is "+a;
+    }
+    else
+    {
+        document.getElementById("result").innerHTML="Biggest Number is "+c;
+    }
+    }
+    else{
+        if (b>c)
+        { document.getElementById("result").innerHTML="Biggest Number is "+b;
+            console.log();
+        }
+        else
+        {
+            document.getElementById("result").innerHTML="Biggest Number is "+c;
+        }
+
+    }
+}
+</script>
+</body>
+</html>
